@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>"Currency Converter</title>
+	</head>
+<body>
+	<H1>AddSkill</H><br><h2> Currency Converter Assignment</br></h2>
+	<h3 class="text-primary"><center>Currency Converter</center</h3>
+		<hr style="border-top:2px solid">
+		<hr style="border-top:1px groovy #ccc;"/>
+			<div class="form-group"><h3>Select for Country Currency</h3>
+				<select onchange="Currency(); Calculate()" id="converter" style="width:20%;">
+					<option value="Aud">Australian Doller</option>
+					<option value="Kan">Kanada</option>
+					<option value="Dol">Dollar</option>
+					<option value="Kwi">Kuwait</option>
+					<option value="Pou">Pound</option>
+					<option value="Eur">Euro</option>
+					<option value="Den">Denmark</option>
+					<option value="Ger">German</option>
+					
+				</select>
+				<br />
+				<input type="number" oninput="Calculate()" id="Textbox1"/>
+				<br /><br />
+				<input type="number" id="Textbox2" disabled="disabled"/>
+			
+</body>
+<script>
+	function Currency(){
+		y = document.getElementById("converter").value;
+		return y;
+	}
+	
+	function Calculate(){
+		y = Currency();
+		
+		x = document.getElementById("Textbox1").value;
+		
+		if(x == ""){
+			document.getElementById("Textbox2").value = "";
+		}else{
+			switch(y){
+				case "Aud":
+					document.getElementById("Textbox2").value = x * 25.89;
+				break;
+
+				case "Kan":
+					document.getElementById("Textbox2").value = x * 51.89;
+				break;
+				
+				case "Dol":
+					document.getElementById("Textbox2").value = x * 75.39;
+				break;
+				
+				case "Kwi":
+					document.getElementById("Textbox2").value = x * 158.65;
+				break;
+				
+				case "Pou":
+					document.getElementById("Textbox2").value = x * 63.84;
+				break;
+				
+				case "Eur":
+					document.getElementById("value2").value = x * 55.64;
+				break;
+				
+				case "Den":
+					document.getElementById("Textbox2").value = x * 8.20;
+				break;
+				case "Ger":
+					document.getElementById("Textbox2").value = x * 51.89;
+				break;
+			}
+		}
+	}
+</script>
+</html>
